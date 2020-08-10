@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  
+  
   def index
      @users = User.order(id: :desc)
   end
@@ -21,8 +23,9 @@ class UsersController < ApplicationController
       flash.now[:danger] = 'ユーザの登録に失敗しました。'
       render :new
     end
-  end
+ end
 
+#Strong Paramter 
   private
 
   def user_params
