@@ -4,10 +4,8 @@ class TasksController < ApplicationController
   
   
 def index
-  if logged_in?
       @task = current_user.tasks.build  # form_with 用
       @task = current_user.tasks.order(id: :desc)
-  end
 end
 def show
 end
